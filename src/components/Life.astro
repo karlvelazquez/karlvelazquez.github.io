@@ -1,0 +1,155 @@
+---
+import { Image } from 'astro:assets';
+import djSideProfile from '../assets/images/mobius-nyc-gala-dj-side-profile.jpeg';
+import djMixerCloseup from '../assets/images/mobius-nyc-gala-dj-mixer-closeup.jpeg';
+import djGuestsBooth from '../assets/images/mobius-nyc-gala-dj-guests-booth.jpeg';
+import rooftopPractice from '../assets/images/rooftop-dj-practice-nyc-skyline.jpeg';
+import williamsburgRooftop from '../assets/images/williamsburg-rooftop-dj-set-night.jpg';
+import lisbonCafe from '../assets/images/lisbon-pasteis-de-nata-cafe.jpeg';
+import lisbonCooking from '../assets/images/lisbon-cooking-class-pasteis-de-nata.jpeg';
+import mammoth from '../assets/images/mammoth-snowboard-trip-summit-group.jpeg';
+import rooftopParty from '../assets/images/nyc-rooftop-party-announcement-july-2026.jpeg';
+
+const artists = [
+  'The Marías', 'Sara Bareilles', 'Not For Radio', 'Creedence Clearwater Revival',
+  'The Doobie Brothers', 'Silver', 'Boston', 'Gloria Gaynor', 'berlioz', 'Ambrosia',
+  'Nirvana', 'Selena', 'Steely Dan', 'The Smiths', 'Jimi Hendrix', 'The Internet',
+  'Jungle', 'Faye Webster', 'Daft Punk', 'TV Girl', 'Men I Trust', 'Jamiroquai', 'Sade',
+  'feeble little horse', 'Khruangbin', 'The Police', 'PinkPantheress', 'Wallows',
+  'Clairo', 'Jordan Ward', 'Nia Archives', 'Daniel Caesar', 'Anderson .Paak',
+  'Kali Uchis', 'Joji', 'Travis Scott', 'Dominic Fike', 'Surf Curse',
+  'The Neighbourhood', 'Eagles', 'Red Hot Chili Peppers', 'Baby Keem', 'A$AP Rocky',
+  'Frank Ocean', 'Phoebe Bridgers', 'SZA', 'Tyler, The Creator', 'Bad Bunny',
+  'Cage The Elephant', 'Gorillaz', 'Playboi Carti', 'Kanye West', 'Kendrick Lamar',
+  'The Weeknd',
+];
+---
+
+<section id="life">
+  <div class="wrap">
+    <span class="section-label">Life &amp; Hobbies</span>
+    <h2 class="section-title">The other half of the story</h2>
+    <p class="section-intro">
+      Robots pay the bills, but this is the rest of it: DJ sets, discography deep-dives,
+      trips, and whatever's cooking.
+    </p>
+
+    <div class="feature-row">
+      <div class="feature-text">
+        <h3>DJing</h3>
+        <p>
+          Karl got into DJing because his fraternity brothers at MIT (Theta Tau) were already
+          into it. He picked it up socially, and it has grown into a real hobby since. He
+          describes himself as an "amateur," but what he values about it is how portable and
+          spontaneous it is: he mixes casually in his apartment, shows up to Prospect Park in
+          Brooklyn to DJ just because, or sets up at a friend's event on an hour's notice. Most
+          of what he plays, he finds digging through SoundCloud.
+        </p>
+        <ul class="gear-list">
+          <li><strong>Software</strong> djay Pro (Algoriddim)</li>
+          <li><strong>Controller</strong> Pioneer DDJ-FLX4</li>
+        </ul>
+        <p>
+          It traces back further than the fraternity, too. Karl took MIT's "DJ History,
+          Technique, and Technology" course and appeared in an MIT student DJ showcase video
+          before it became a standing hobby: apartment sessions, the Williamsburg rooftop set
+          below, and a full DJ booth at the Möbius Industries NYC open house gala.
+        </p>
+      </div>
+      <div class="feature-photos">
+        <figure class="tall">
+          <Image src={djSideProfile} alt="Side profile of Karl DJing at the Mobius Industries gala, purple event lighting" width={800} height={1000} />
+        </figure>
+        <figure>
+          <Image src={djMixerCloseup} alt="Close-up of Karl's hands on a DJ mixer at the Mobius Industries gala" width={800} height={600} />
+        </figure>
+      </div>
+    </div>
+
+    <div class="photo-grid" style="margin-top: 1.5rem;">
+      <figure class="span-6">
+        <Image src={djGuestsBooth} alt="Karl DJing at the Mobius Industries gala with guests chatting nearby" width={900} height={650} />
+        <figcaption>Möbius Industries NYC open house gala, June 2026</figcaption>
+      </figure>
+      <figure class="span-3">
+        <Image src={rooftopPractice} alt="Karl practicing DJing solo on a rooftop with the Manhattan skyline behind him" width={450} height={650} />
+        <figcaption>Solo rooftop practice, NYC</figcaption>
+      </figure>
+      <figure class="span-3">
+        <Image src={williamsburgRooftop} alt="Karl DJing at a nighttime rooftop gathering in Williamsburg, Brooklyn" width={450} height={650} />
+        <figcaption>Williamsburg rooftop set</figcaption>
+      </figure>
+    </div>
+
+    <div class="feature-row" style="margin-top: 4rem;">
+      <div class="feature-text">
+        <h3>54 discographies and counting</h3>
+        <p>
+          Separately from DJing, Karl has kept a running habit since 2023: pick an artist, and
+          listen to their entire discography start to finish, in chronological order. It is a
+          screenshot-tracked list, 54 artists so far and likely an undercount of his real total,
+          spanning classic rock, soul and funk, grunge, Tejano, bedroom pop, hip-hop, R&amp;B,
+          and reggaeton. Below is the actual list, in no particular order.
+        </p>
+      </div>
+      <div class="artist-cloud-wrap">
+        <p class="artist-cloud-label">Full-discography deep dives, chronologically, since 2023</p>
+        <ul class="artist-cloud">
+          {artists.map((a) => <li>{a}</li>)}
+        </ul>
+      </div>
+    </div>
+
+    <div class="feature-row reverse" style="margin-top: 4rem;">
+      <div class="feature-text">
+        <h3>Travel</h3>
+        <p>
+          A solo surf trip to Portugal, Lisbon and Ericeira, in June 2026, which turned into as
+          much of a food trip as a surf trip, including a hands-on Portuguese pastry class
+          making pastéis de nata. A snowboard trip to Mammoth, CA in March 2026 with friends,
+          granite peaks and all. A snowboard trip to Chile in August 2026. Somewhere in there,
+          Ultra Music Festival in Miami, two years running.
+        </p>
+      </div>
+      <div class="feature-photos">
+        <figure class="tall">
+          <Image src={lisbonCooking} alt="Karl in a Home Cooking Lisbon apron, pouring custard into pastry shells during a pasteis de nata cooking class" width={800} height={1000} />
+        </figure>
+        <figure>
+          <Image src={lisbonCafe} alt="Karl holding a plate of two pasteis de nata in a Lisbon cafe" width={800} height={600} />
+        </figure>
+      </div>
+    </div>
+
+    <div class="photo-grid" style="margin-top: 1.5rem;">
+      <figure class="span-12">
+        <Image src={mammoth} alt="Three men at a snowy Mammoth, CA mountain summit with snowboards, granite peaks in the background" width={1600} height={700} />
+        <figcaption>Mammoth, CA, March 2026</figcaption>
+      </figure>
+    </div>
+
+    <div class="feature-row" style="margin-top: 4rem;">
+      <div class="feature-text">
+        <h3>Cooking, hosting, and everything else</h3>
+        <p>
+          Beyond the trips and the turntables: cooking, arts and crafts, raves and live music,
+          and a lot of time spent with friends. In July 2026 he threw a rooftop party in New
+          York and gave an impromptu announcement to the crowd, the kind of thing that happens
+          when you are the one who planned it.
+        </p>
+        <div class="chip-row">
+          <span class="chip">Cooking</span>
+          <span class="chip">Hosting</span>
+          <span class="chip">Raves &amp; live music</span>
+          <span class="chip">Arts &amp; crafts</span>
+          <span class="chip">Time with friends</span>
+        </div>
+      </div>
+      <div class="feature-photos">
+        <figure class="span-12" style="grid-column: span 2;">
+          <Image src={rooftopParty} alt="Karl giving an announcement into a microphone at a rooftop party he hosted, crowd cheering around him, NYC skyline at dusk" width={1000} height={750} />
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>

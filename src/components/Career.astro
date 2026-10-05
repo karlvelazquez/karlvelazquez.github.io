@@ -1,0 +1,206 @@
+---
+import { Image } from 'astro:assets';
+import rssTitle from '../assets/images/rss-2025-stage-presentation-title-slide.jpeg';
+import rssWide from '../assets/images/rss-2025-presentation-wide-stage-view.jpeg';
+import rssAudience from '../assets/images/rss-2025-welcome-screen-audience.jpeg';
+import machinePortrait from '../assets/images/mobius-industries-machine-portrait.jpeg';
+import workshopDemo from '../assets/images/mobius-industries-workshop-machine-demo.jpeg';
+
+const timeline = [
+  {
+    role: 'Head of AI, Sensing & Software',
+    org: 'Möbius Industries',
+    dates: 'June 2025 – Present · New York, NY',
+    body: 'Leading the AI, sensing, and software stack behind an automated "de-manufacturing" platform that disassembles and sorts end-of-life electronics and appliances to recover high-purity raw materials, including steel, aluminum, copper, cobalt, and lithium, as an alternative to overseas mining.',
+    featured: true,
+  },
+  {
+    role: 'Robotics Researcher',
+    org: "MIT d'Arbeloff Laboratory",
+    dates: 'September 2024 – June 2025',
+    body: 'Built a PyTorch framework translating human force profiles to language and back, ran 10-volunteer human trials, controlled UR 6-axis arms with admittance/virtual-dynamics control, and ran an observational study with a Spaulding Rehabilitation physical therapist. This work became the RSS 2025 and Nature papers below.',
+  },
+  {
+    role: 'Software Engineer Intern',
+    org: 'Capital One',
+    dates: 'June – August 2024 · McLean, VA',
+    body: 'Added Zelle event-data publishing into Capital One’s internal data lakes using Java and Spring Boot, with Snowflake and Splunk for downstream querying and monitoring.',
+  },
+  {
+    role: 'Software Engineer Intern',
+    org: 'Apple',
+    dates: 'May – August 2023 · Cupertino, CA',
+    body: 'Worked on OS-level daemon services in Swift for HomePod and iPhone, plus SwiftUI updates to the Home app. NDA’d, so details beyond this are confidential.',
+  },
+  {
+    role: 'DeFi Research & Backend Dev Extern',
+    org: 'Opdefi',
+    dates: 'January 2023 · Remote',
+    body: 'Researched DeFi protocols (Uniswap, Curve, Convex) and wired up smart-contract interactions with ABIs, typechain, and ethers.js, tested against Foundry mainnet forks.',
+  },
+  {
+    role: 'Backend Engineer (Contract)',
+    org: 'Oculo Health',
+    dates: 'May – September 2022 · Remote',
+    body: 'Built the backend for an AI-powered mental fitness tracker from scratch: an Express.js/Node.js API and a hand-rolled auth system (Passport.js, bcrypt, sessions), deployed on EC2 behind nginx.',
+  },
+  {
+    role: 'Undergraduate Researcher',
+    org: 'MIT Mobile Technology Lab',
+    dates: 'June – August 2022 · Remote',
+    body: 'Backend work on a health diagnostics platform, and began overhauling a legacy audio-sharing site used in mental-health treatment.',
+  },
+  {
+    role: 'Undergraduate Researcher',
+    org: 'MIT Signal Kinetics',
+    dates: 'June – August 2022 · Remote',
+    body: "Serverless backend (AWS AppSync GraphQL, DynamoDB, Lambda) for an IoT indoor-mapping system, within Fadel Adib's wireless-sensing research group.",
+  },
+  {
+    role: 'Undergraduate Researcher',
+    org: 'MIT App Inventor',
+    dates: 'January 2022 · Cambridge, MA / Remote',
+    body: 'Built a new serverless backend, reviewed IoT curriculum submissions from international partner institutions, and built micro:bit-based demos and curriculum projects.',
+  },
+];
+---
+
+<section id="career">
+  <div class="wrap">
+    <span class="section-label">Career & Publications</span>
+    <h2 class="section-title">Ten roles, two papers, and one origin story worth telling</h2>
+    <p class="section-intro">
+      A string of backend, robotics, and research roles over the course of a decade, leading,
+      more or less by accident, to a friend's robotics startup.
+    </p>
+
+    <div class="timeline">
+      {timeline.map((item) => (
+        <div class:list={['timeline-item', { featured: item.featured }]}>
+          <div class="timeline-role">{item.role} · {item.org}</div>
+          <div class="timeline-meta">{item.dates}</div>
+          <p>{item.body}</p>
+          {item.featured && (
+            <div class="origin-story">
+              <p>
+                <strong>How this happened:</strong> Möbius's founder and CEO, Matthew Pierre
+                Louis, is a close friend and a fraternity brother from Theta Tau at MIT, a year
+                below Karl. Karl had planned to stay at MIT for a Master of Engineering, but
+                lost his funding path when federal cuts hit academic research funding. Around
+                the same time, he and Matthew were already planning to split an apartment in
+                Cambridge. When Matthew asked what Karl's rent budget was, Karl had to admit he
+                had no funding lined up and could not actually cover it.
+              </p>
+              <p>
+                Matthew, who was building Möbius and needed a software engineer, offered Karl a
+                three-month internship so he could get his financial footing back. Karl ended up
+                enjoying the work enough that the three-month internship never really ended. He
+                joined full-time the Monday after his Friday MIT graduation and is now Head of
+                AI, Sensing, and Software there. As Karl puts it, "the rest is history."
+              </p>
+            </div>
+          )}
+        </div>
+      ))}
+    </div>
+
+    <div class="feature-row" style="margin-top: 3.5rem;">
+      <div class="feature-text">
+        <h3>Life inside the workshop</h3>
+        <p>
+          Möbius is building toward a planned New York relocation, but the early machines, like
+          the "Multi-Line Juliet V2," one of the de-manufacturing line's core sorting units, were
+          built and tested out of the Boston/Cambridge workshop.
+        </p>
+      </div>
+      <div class="feature-photos">
+        <figure>
+          <Image src={machinePortrait} alt="Karl standing arms-crossed in front of the Multi-Line Juliet V2 machine at the Mobius Industries workshop" width={700} height={900} />
+        </figure>
+        <figure>
+          <Image src={workshopDemo} alt="Karl gesturing toward a control panel while demoing hardware to a colleague in the workshop" width={700} height={500} />
+        </figure>
+      </div>
+    </div>
+
+    <hr class="divider" style="margin: 4rem 0;" />
+
+    <h3 style="font-size: 1.5rem;">Publications</h3>
+    <p class="section-intro">
+      Two papers, both on the same throughline: teaching robots to combine physical force and
+      spoken language the way a good physical therapist does.
+    </p>
+
+    <div class="pub-grid">
+      <article class="pub-card">
+        <figure>
+          <Image src={rssTitle} alt="Karl presenting on stage at RSS 2025, title slide reading Cross-modality Force and Language Embeddings for Natural Human-Robot Communication" width={800} height={500} />
+        </figure>
+        <div class="pub-body">
+          <span class="pub-venue">RSS 2025 · Robotics: Science and Systems</span>
+          <h3>Cross-Modality Embedding of Force and Language for Natural Human-Robot Communication</h3>
+          <p>
+            When two people carry something heavy together, they coordinate with both touch and
+            talk: "lift on three," "a little more your side." This project teaches a robot to do
+            the same. It learns a shared mathematical space where a physical push and a sentence
+            describing that push land in roughly the same place, so the robot can translate
+            between "push harder" and an actual force, and back again. Built on a UR robot arm,
+            trained and validated with 10 human volunteers, and informed by watching real
+            physical therapy sessions at Spaulding Rehabilitation.
+          </p>
+          <p>
+            Presented in person at USC, June 2025. RSS is one of robotics' most selective
+            venues, with roughly a quarter of submissions accepted. Karl was a main contributor,
+            alongside Ravi Tejwani, John Payne, Paolo Bonato, and Harry Asada, spanning MIT,
+            Harvard Medical School, and the Spaulding Rehabilitation Network.
+          </p>
+          <div class="pub-links">
+            <a href="https://arxiv.org/abs/2502.02772" target="_blank" rel="noopener">arXiv preprint</a>
+            <a href="https://shared-language-force-embedding.github.io" target="_blank" rel="noopener">Project site</a>
+            <a href="https://github.com/Shared-Language-Force-Embedding/shared-language-force-embedding" target="_blank" rel="noopener">Code</a>
+            <a href="https://roboticsconference.org/2025/program/papers/86/" target="_blank" rel="noopener">RSS program</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="pub-card">
+        <figure>
+          <Image src={rssWide} alt="Wide stage view of the RSS 2025 presentation with two seated panelists" width={800} height={500} />
+        </figure>
+        <div class="pub-body">
+          <span class="pub-venue">Communications Engineering (Nature portfolio) · 2026</span>
+          <h3>Adaptive Robot Guidance Through Real-Time Compliance Estimation and Dual-Modal Control</h3>
+          <p>
+            The direct follow-up to the RSS paper, and the more clinically-minded of the two.
+            Picture a good dance instructor: when you're struggling, they physically position
+            your arms and give firm verbal correction; once you've got it, they back off to a
+            light touch and encouragement. This paper builds a controller that does exactly
+            that for a robot arm. It estimates, in real time, how "physically compliant" and
+            "verbally compliant" a person is being, and dynamically shifts the mix of force and
+            speech accordingly. The approach is proven mathematically safe, meaning it cannot
+            inject net energy into the person it is guiding.
+          </p>
+          <p>
+            Validated with a Spaulding Rehabilitation observational study and a 12-person MIT
+            user study: up to 50% less tracking error, 39% smoother movement, and 27% faster
+            task completion versus fixed-combination guidance. Karl co-implemented the
+            controller, designed and ran the experiments, and co-wrote the paper, alongside
+            Ravi Tejwani, John Payne, Paolo Bonato, and Harry Asada.
+          </p>
+          <div class="pub-links">
+            <a href="https://doi.org/10.1038/s44172-026-00632-5" target="_blank" rel="noopener">Read the paper</a>
+            <a href="https://github.com/robot-guidance-controller/robot-guidance-controller/" target="_blank" rel="noopener">Code</a>
+            <a href="https://doi.org/10.17632/bgybkjtpn9.2" target="_blank" rel="noopener">Dataset</a>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <div class="photo-grid" style="margin-top: 2rem;">
+      <figure class="span-12">
+        <Image src={rssAudience} alt="Wide auditorium shot of the RSS 2025 opening session at USC, Los Angeles" width={1600} height={700} />
+        <figcaption>RSS 2025 opening session, USC, Los Angeles, June 2025</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,29 @@
+---
+import { Image } from 'astro:assets';
+import headshot from '../assets/images/mobius-industries-headshot.jpeg';
+---
+
+<section class="hero" id="top">
+  <div class="wrap">
+    <div class="hero-copy">
+      <p class="hero-eyebrow">Head of AI, Sensing &amp; Software · Möbius Industries</p>
+      <h1>Karl Velazquez</h1>
+      <p class="hero-lede">
+        Born and raised in Los Angeles to Mexican parents, I moved across the country to study
+        at MIT, where I found robotics research and kept at it. These days I live in New York
+        City, where I lead AI, sensing, and software at Möbius Industries, a de-manufacturing
+        startup founded by one of my closest friends. Outside of work, I'm usually behind a DJ
+        controller, working through someone's entire discography, or planning the next trip.
+      </p>
+      <ul class="hero-tags">
+        <li>Robotics &amp; HRI research</li>
+        <li>MIT '25</li>
+        <li>Amateur DJ</li>
+        <li>NYC via Boston via LA</li>
+      </ul>
+    </div>
+    <div class="hero-photo-frame">
+      <Image src={headshot} alt="Karl Velazquez, studio headshot in a Möbius Industries jacket" width={640} height={800} />
+    </div>
+  </div>
+</section>

@@ -1,0 +1,70 @@
+---
+import { Image } from 'astro:assets';
+import gradDiploma from '../assets/images/mit-graduation-diploma-portrait.jpeg';
+import gradWalk from '../assets/images/mit-graduation-walk-fist-pump.jpeg';
+import slamSolo from '../assets/images/slam-poetry-stage-solo-high-school.jpeg';
+import slamGroup from '../assets/images/slam-poetry-group-photo-funny-pose.jpeg';
+---
+
+<section id="education">
+  <div class="wrap">
+    <span class="section-label">Education & MIT Background</span>
+    <h2 class="section-title">From Tradewinds Slam Poetry Night to Killian Court</h2>
+
+    <div class="feature-row">
+      <div class="feature-photos">
+        <figure class="tall">
+          <Image src={gradDiploma} alt="Karl in MIT cap and gown holding his diploma case in Killian Court" width={800} height={1000} />
+        </figure>
+        <figure>
+          <Image src={gradWalk} alt="Karl pumping his fist while walking past a large MIT sign at graduation" width={800} height={600} />
+        </figure>
+      </div>
+      <div class="feature-text">
+        <h3>MIT School of Engineering</h3>
+        <p>
+          BS in Computer Science &amp; Engineering, September 2021 to June 2025, 4.4 cumulative
+          GPA. Graduated in person at MIT's June 2025 commencement in Killian Court, then
+          started full-time at Möbius Industries the following Monday. Currently pursuing a
+          Master of Engineering (MEng) in CS&amp;E, concentrating in Machine Learning and AI,
+          September 2025 to June 2026.
+        </p>
+      </div>
+    </div>
+
+    <div class="edu-grid" style="margin-top: 3.5rem;">
+      <div class="edu-card">
+        <h3>Theta Tau</h3>
+        <p>
+          Treasurer, Feb–Dec 2024, managing roughly $185–200K in member dues per semester
+          across 50+ brothers and filing the chapter's IRS Form 990. Also served as Brotherhood
+          Chair at one point.
+        </p>
+        <p class="footnote">The chapter reaffiliated with Phi Kappa Psi in spring 2025, after Karl's time as an active member. A minor organizational footnote, not a story in its own right.</p>
+      </div>
+      <div class="edu-card">
+        <h3>VEX Robotics</h3>
+        <p>High school main programmer, co-founder, and team lead, the earliest evidence of the robotics interest that runs through everything else here.</p>
+      </div>
+      <div class="edu-card">
+        <h3>Speech &amp; Debate</h3>
+        <p>Competed in both Public Forum and Lincoln-Douglas formats.</p>
+      </div>
+      <div class="edu-card">
+        <h3>Slam Poetry</h3>
+        <p>A regular at "Tradewinds Slam Poetry Night," with solo sets at the mic and plenty of goofing around with the rest of the troupe.</p>
+      </div>
+    </div>
+
+    <div class="photo-grid" style="margin-top: 2.5rem;">
+      <figure class="span-6">
+        <Image src={slamSolo} alt="A younger Karl standing alone on stage at a microphone, Tradewinds Slam Poetry Night sign beside him" width={700} height={650} />
+        <figcaption>Tradewinds Slam Poetry Night, solo set</figcaption>
+      </figure>
+      <figure class="span-6">
+        <Image src={slamGroup} alt="A group of high school students posed on stage with a younger Karl lying on the ground in front making a joking pose" width={700} height={650} />
+        <figcaption>The slam poetry troupe, mid-joke</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>

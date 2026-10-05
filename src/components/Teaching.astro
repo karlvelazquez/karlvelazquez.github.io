@@ -1,0 +1,46 @@
+---
+import { Image } from 'astro:assets';
+import koreaGroup from '../assets/images/korea-robotics-teaching-group-photo.jpeg';
+import koreaHike from '../assets/images/korea-hike-mountain-summit-victory-pose.jpeg';
+---
+
+<section id="teaching">
+  <div class="wrap">
+    <span class="section-label">Teaching & Speaking</span>
+    <h2 class="section-title">Passing it on</h2>
+    <p class="section-intro">
+      Robotics stuck with Karl partly because people took the time to teach it to him well, so
+      he has tried to return the favor.
+    </p>
+
+    <div class="feature-row">
+      <div class="feature-photos">
+        <figure class="tall">
+          <Image src={koreaGroup} alt="Karl with a large group of Korean high school students at Hansung Science High School, all making a finger-heart gesture" width={800} height={1000} />
+        </figure>
+        <figure>
+          <Image src={koreaHike} alt="Karl with fists raised on a mountain summit near Seoul, radar dome visible in the background" width={800} height={600} />
+        </figure>
+      </div>
+      <div class="feature-text">
+        <h3>A week of robotics in Korea</h3>
+        <p>
+          In July 2025, Karl taught a week-long robotics program to high schoolers at Hansung
+          Science High School (한성과학고등학교) in Korea, guiding students through Arduino-based
+          projects from first principles. He stayed on afterward for some hiking around Seoul.
+          A nearby summit with a radar dome, likely Bukhansan, capped off the trip.
+        </p>
+      </div>
+    </div>
+
+    <div class="origin-story" style="margin-top: 3.5rem; max-width: 70ch;">
+      <h3 style="font-size: 1.3rem; margin-bottom: 0.6rem;">Telling the Möbius story at MIT Sloan</h3>
+      <p>
+        At the end of September 2026, Karl went back to campus to speak with the MIT Sloan
+        Robotics Club about Möbius Industries, covering the business, the technology, and what
+        it is actually like to go from a three-month favor for a friend to running AI, sensing,
+        and software for a funded robotics startup.
+      </p>
+    </div>
+  </div>
+</section>
